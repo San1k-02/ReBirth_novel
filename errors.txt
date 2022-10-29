@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 36: end of line expected.
-    gg "Что такое?" "Где я?"
-                    ^
+File "game/script.rpy", line 23: expected statement.
+    music musnormal volume 0.2 
+                            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Oct 28 20:00:14 2022
+Sat Oct 29 10:05:23 2022
