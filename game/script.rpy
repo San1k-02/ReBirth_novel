@@ -1,7 +1,7 @@
 
-
 define crowd = Character('Толпа', color="#666666")
 define speaker = Character('Спикер', color="#ffffff")
+define women = Character('Женщина из толпы', color="#666666")
 define audio.musnormal = "audio/tolpa.mp3"
 define audio.speaker1 = "audio/1.mp3"
 define audio.speaker2 = "audio/2.mp3"
