@@ -23,17 +23,17 @@ init python:
 ## Цвета текста в интерфейсе.
 
 ## Акцентный цвет используется в заголовках и подчёркнутых текстах.
-define gui.accent_color = '#99ccff'
+define gui.accent_color = '#5f9fb8'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#f69a45'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/темнее,
 ## для того, чтобы выделяться.
 define gui.idle_small_color = '#aaaaaa'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#c1e0ff'
+define gui.hover_color = '#efd29f'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -56,13 +56,13 @@ define gui.interface_text_color = '#ffffff'
 ## Шрифты и их размеры #########################################################
 
 ## Шрифт, используемый внутриигровым текстом.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "gui/fonts/Troubleside.ttf"
 
 ## Шрифт, используемый именами персонажей.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "gui/fonts/Troubleside.ttf"
 
 ## Шрифт, используемый текстом вне игры.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "gui/fonts/ofont.ru_Toyz.ttf"
 
 ## Размер нормального текста диалога.
 define gui.text_size = 33
@@ -71,7 +71,7 @@ define gui.text_size = 33
 define gui.name_text_size = 45
 
 ## Размер текста в пользовательском интерфейсе.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 54
 
 ## Размер заголовков в пользовательском интерфейсе.
 define gui.label_text_size = 36
@@ -410,7 +410,9 @@ define gui.nvl_button_xalign = 0.0
 ## https://www.renpy.org/doc/html/style_properties.html#style-property-language
 
 define gui.language = "unicode"
+define audio.phonk = "audio/phonk.mp3"
 
+play music phonk volume 0.2
 
 ################################################################################
 ## Мобильные устройства
