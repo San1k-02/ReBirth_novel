@@ -288,10 +288,12 @@ style quick_button_text:
 screen navigation():
 
     vbox:
+
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
         yalign 0.5
+        xalign -0.10
 
         spacing gui.navigation_spacing
 
@@ -305,7 +307,7 @@ screen navigation():
 
             textbutton _("Сохранить") action ShowMenu("save")
 
-        textbutton _("Загрузить") action ShowMenu("load")
+        textbutton _("Продолжить") action ShowMenu("load")
 
         textbutton _("Настройки") action ShowMenu("preferences")
 
@@ -356,9 +358,9 @@ screen main_menu():
 
     add gui.main_menu_background
 
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
+    # ## Эта пустая рамка затеняет главное меню.
+    # frame:
+    #     style "main_menu_frame"
 
     ## Оператор use включает отображение другого экрана в данном. Актуальное
     ## содержание главного меню находится на экране навигации.
@@ -589,7 +591,7 @@ screen load():
 
     tag menu
 
-    use file_slots(_("Загрузить"))
+    use file_slots(_("Продолжить"))
 
 
 screen file_slots(title):
