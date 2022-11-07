@@ -21,6 +21,12 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
     # Устанавливает постепенное появление и исчезновение бара и требуется только один раз в скрипте
+
+init:
+    default seen = renpy.count_seen_dialogue_blocks()
+    default dialogue = renpy.count_dialogue_blocks()
+    default result = seen * 100 / dialogue
+
 screen countdown:
     timer 1 repeat True action If(time > 0, true=SetVariable('time', time - 1), false=[Hide('countdown'), Jump(timer_jump)])
     if time <= 3:
