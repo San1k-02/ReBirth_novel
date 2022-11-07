@@ -378,6 +378,7 @@ screen main_menu():
                 style "main_menu_version"
 
 
+
 style main_menu_frame is empty
 style main_menu_vbox is vbox
 style main_menu_text is gui_text
@@ -481,6 +482,12 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
+    vbox:
+        xpos 0.02 ypos 0.98
+        xanchor 0.0 yanchor 1.0
+        $ percent = "Finished: [result]%"
+        text percent xalign 0.5
+
 
 
 style game_menu_outer_frame is empty

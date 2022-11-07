@@ -1,1 +1,0 @@
-# ReBirth_novel
