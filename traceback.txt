@@ -1,96 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('gui/main_menu.mp4') at 0x0000000005b676a0>:
-  File "renpy/common/00start.rpy", line 278, in script
-    python:
-  File "renpy/common/00start.rpy", line 278, in script
-    python:
-  File "renpy/common/00start.rpy", line 282, in <module>
-    renpy.call_in_new_context("_main_menu")
-Exception: Could not load image 'gui/main_menu.mp4': error('Unsupported image format')
+While running game code:
+  File "game/script.rpy", line 133, in script
+    play music dictor8 volume 0.4
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 133, in <module>
+    play music dictor8 volume 0.4
+NameError: name 'dictor8' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 278, in script
-    python:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "renpy/common/00start.rpy", line 278, in script
-    python:
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 282, in <module>
-    renpy.call_in_new_context("_main_menu")
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\game.py", line 346, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
-    context.run()
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3912, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 2602, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 495, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 704, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\im.py", line 627, in render
-    return cache.get(self, render=True)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\im.py", line 295, in get
-    surf = image.load()
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\im.py", line 720, in load
-    raise e
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\im.py", line 699, in load
-    surf = renpy.display.pgrender.load_image(f, filename)
-  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\display\pgrender.py", line 160, in load_image
-    raise Exception("Could not load image {!r}: {!r}".format(filename, e))
-Exception: Could not load image 'gui/main_menu.mp4': error('Unsupported image format')
+  File "game/script.rpy", line 133, in script
+    play music dictor8 volume 0.4
+  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Alexander\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 133, in <module>
+    play music dictor8 volume 0.4
+NameError: name 'dictor8' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Rebirth 1.0
-Thu Nov 10 23:52:16 2022
+Fri Nov 11 23:53:02 2022

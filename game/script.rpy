@@ -3,12 +3,16 @@ define speaker = Character('Спикер', color="#ffffff")
 define women_from_the_crowd = Character('Женщина из толпы', color="#666666") 
 define audio.musnormal = "audio/tolpa.mp3"
 define audio.likovanie = "audio/likovanie.mp3"
-define audio.speaker5 = "audio/speaker/5.mp3"
-define audio.speaker6 = "audio/speaker/6.mp3"
-define audio.speaker7 = "audio/speaker/7.mp3"
-define audio.speaker8 = "audio/speaker/8.mp3"
-define audio.speaker9 = "audio/speaker/9.mp3"
-define audio.speaker10 = "audio/speaker/10.mp3"
+define audio.dictor1 = "audio/dictor/1.mp3"
+define audio.gg1 = "audio/gg/1.mp3"
+define audio.dictor2 = "audio/dictor/2.mp3"
+define audio.gg2 = "audio/gg/2.mp3"
+define audio.dictor3 = "audio/dictor/3.mp3"
+define audio.dictor4 = "audio/dictor/4.mp3"
+define audio.dictor5 = "audio/dictor/5.mp3"
+define audio.dictor6 = "audio/dictor/6.mp3"
+define audio.dictor7 = "audio/dictor/7.mp3"
+define audio.dictor8 = "audio/dictor/8.mp3"
 define audio.speaker11 = "audio/speaker/11.mp3"
 define audio.speaker12 = "audio/speaker/12.mp3"
 define audio.shag = "audio/zvuki-shaga.mp3"
@@ -53,14 +57,14 @@ label start:
 
     stop music
 
-    play sound speaker5 volume 0.2
+    play sound dictor1 volume 0.2
     speaker "Дорогие сограждане" 
-    stop sound 
+    #stop sound 
 
     #play sound speaker volume 0.2
     speaker "Я рад сообщить, 
     что за прошлый месяц в нашем замечательном городе значительно снизился процент преступности"
-    #stop sound 
+    stop sound 
 
     play music likovanie volume 0.2 
     crowd "*Ликование толпы*"
@@ -74,13 +78,15 @@ label start:
     show gg 
     with dissolve
     stop music
+    play sound gg1 volume 0.2
     gg "Ага, на одно ограбление бабушки меньше, достойный повод для гордости"
+    stop sound
 
     scene bg first
     with fade
     pause 0.75
 
-    play sound speaker6 volume 0.2
+    play sound dictor2 volume 0.2
     speaker "Также со дня на день произойдет раздача еды нуждающимся"
     stop music
     pause 0.4
@@ -91,31 +97,44 @@ label start:
 
     scene bg second
     show gg
+    play sound gg2 volume 0.2
     gg "Опять раздадут свои объедки, какая щедрость"
+    stop sound
 
     scene bg first
     pause 0.75
-    play sound speaker7 volume 0.2
-    speaker "Но это еще не все, по причине грядущего праздника будут проведены торжественные мероприятия объявлены 2 выходных дня"
-    stop music
+    play sound dictor3 volume 0.2
+    speaker "Но это еще не все, по причине грядущего праздника будут проведены торжественные мероприятия"
+    stop sound
+
+    play sound dictor4 volume 0.2
+    speaker "Поэтому мэр города издал указ, согласно которому следующая неделя объявляется нерабочей"
+    stop sound
 
     play music likovanie volume 0.2
     crowd "*Ликование толпы*"
     stop music
 
-    play music speaker8 volume 0.4
+    play music dictor5 volume 0.4
     speaker "И напоследок, я вынужден объявить, что ряд институтов и школ будет закрыт по причине нехватки финансирования и малой рентабельности"
     stop music 
     
     women_from_the_crowd "Опять вам не хватает денег на образование, лишь бы развлекаться"
 
+    play music dictor6 volume 0.4
     speaker "Уведите женщину"
+    stop music
 
     women_from_the_crowd "Да как вы смеете, я заслуженный учитель"
 
+    play music dictor7 volume 0.4
     speaker "Если вы не способны с благодарностью принимать все, что мы для вас делаем, то возможно вы не достойны этого"
-    speaker "Наша страна славится уровнем своего образования, исходя из этого я не считаю данные мнения"
-    speaker "Ммм...Здравыми"
+    stop music
+
+    play music dictor8 volume 0.4
+    speaker "Наша страна славится уровнем своего образования, исходя из этого я не считаю данное мнение"
+    speaker "Ммм...Здравым"
+    stop music
 
     scene bg second
     show gg
