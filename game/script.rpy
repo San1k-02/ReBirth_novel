@@ -13,8 +13,9 @@ define audio.dictor5 = "audio/dictor/5.mp3"
 define audio.dictor6 = "audio/dictor/6.mp3"
 define audio.dictor7 = "audio/dictor/7.mp3"
 define audio.dictor8 = "audio/dictor/8.mp3"
-define audio.speaker11 = "audio/speaker/11.mp3"
-define audio.speaker12 = "audio/speaker/12.mp3"
+define audio.gg3 = "audio/gg/3.mp3"
+define audio.gg4 = "audio/gg/4.mp3"
+define audio.gg5 = "audio/gg/5.mp3"
 define audio.shag = "audio/zvuki-shaga.mp3"
 define audio.plevok = "audio/plevok.mp3"
 define gg =Character('Главный герой', color="#4944d1")
@@ -88,7 +89,7 @@ label start:
 
     play sound dictor2 volume 0.2
     speaker "Также со дня на день произойдет раздача еды нуждающимся"
-    stop music
+    stop sound
     pause 0.4
 
     play music likovanie volume 0.2
@@ -138,12 +139,18 @@ label start:
 
     scene bg second
     show gg
+    play music gg3 volume 0.4
     gg "Замечательно, еще одним недовольным меньше"
+    stop music
     play sound plevok
     gg "*звук плевка*"
     stop sound
+    play music gg4 volume 0.4
     gg "Удивительно, что эта женщина сохранила в себе эту искру"
+    stop music
+    play music gg5 volume 0.4
     gg "Обычно она пропадает с окончанием подросткового максимализма"
+    stop music
 
     scene bg third
     with fade
