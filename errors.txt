@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: invalid syntax
-    $ result = 0
-     ^
-    
+File "game/script.rpy", line 233: end of line expected.
+    father "*Очень вспыльчиво*" "Сколько можно позорить семью? Я сто раз говорил тебе, забудь про свое эго!"
+                                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov  7 20:39:06 2022
+Wed Nov 16 22:59:37 2022

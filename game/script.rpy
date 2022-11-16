@@ -18,8 +18,22 @@ define audio.gg4 = "audio/gg/4.mp3"
 define audio.gg5 = "audio/gg/5.mp3"
 define audio.shag = "audio/zvuki-shaga.mp3"
 define audio.plevok = "audio/plevok.mp3"
-define gg =Character('Главный герой', color="#4944d1")
-define teacher = Character("Елизавета Андреевна", color="#603d3d")
+define audio.young1 = "audio/young_gg/1.mp3"
+define audio.young2 = "audio/young_gg/2.mp3"
+define audio.young3 = "audio/young_gg/3.mp3"
+define audio.young4 = "audio/young_gg/4.mp3"
+define audio.young5 = "audio/young_gg/5.mp3"
+define audio.young6 = "audio/young_gg/6.mp3"
+define audio.young7 = "audio/young_gg/7.mp3"
+define audio.young8 = "audio/young_gg/8.mp3"
+define audio.young9 = "audio/young_gg/9.mp3"
+define audio.father1 = "audio/father/1.mp3"
+define audio.father2 = "audio/father/2.mp3"
+define audio.father3 = "audio/father/3.mp3"
+define gg = Character ('Главный герой', color="#4944d1")
+define teacher = Character ("Елизавета Андреевна", color="#603d3d")
+define mother = Character ("Мать", color="#996262")
+define father = Character ("Отец", color="#3d4b72")
 transform alpha_dissolve:
     alpha 0.0
     linear 0.5 alpha 1.0
@@ -50,7 +64,7 @@ label start:
 
     scene bg first
     with fade
-    play music musnormal volume 0.2 
+    play music musnormal volume 0.4
 
     pause 1.5
 
@@ -58,7 +72,7 @@ label start:
 
     stop music
 
-    play sound dictor1 volume 0.2
+    play sound dictor1 volume 0.4
     speaker "Дорогие сограждане" 
     #stop sound 
 
@@ -67,7 +81,7 @@ label start:
     что за прошлый месяц в нашем замечательном городе значительно снизился процент преступности"
     stop sound 
 
-    play music likovanie volume 0.2 
+    play music likovanie volume 0.4
     crowd "*Ликование толпы*"
     stop music 
 
@@ -79,7 +93,7 @@ label start:
     show gg 
     with dissolve
     stop music
-    play sound gg1 volume 0.2
+    play sound gg1 volume 0.4
     gg "Ага, на одно ограбление бабушки меньше, достойный повод для гордости"
     stop sound
 
@@ -87,32 +101,32 @@ label start:
     with fade
     pause 0.75
 
-    play sound dictor2 volume 0.2
+    play sound dictor2 volume 0.4
     speaker "Также со дня на день произойдет раздача еды нуждающимся"
     stop sound
     pause 0.4
 
-    play music likovanie volume 0.2
+    play music likovanie volume 0.4
     crowd "*Ликование толпы*"
     stop music
 
     scene bg second
     show gg
-    play sound gg2 volume 0.2
+    play sound gg2 volume 0.4
     gg "Опять раздадут свои объедки, какая щедрость"
     stop sound
 
     scene bg first
     pause 0.75
-    play sound dictor3 volume 0.2
+    play sound dictor3 volume 0.4
     speaker "Но это еще не все, по причине грядущего праздника будут проведены торжественные мероприятия"
     stop sound
 
-    play sound dictor4 volume 0.2
+    play sound dictor4 volume 0.4
     speaker "Поэтому мэр города издал указ, согласно которому следующая неделя объявляется нерабочей"
     stop sound
 
-    play music likovanie volume 0.2
+    play music likovanie volume 0.4
     crowd "*Ликование толпы*"
     stop music
 
@@ -198,27 +212,131 @@ label wrong_answer:
     teacher "Что у тебя на уме? Как ты жить дальше будешь? "
     teacher "Третью неделю подряд не можешь ни что ответить"
 
+    play music young1 volume 0.4
     gg "Возможно я не могу ни на что ответить потому что вы не можете ничего нормально объяснить?"
+    stop music
+
+    play music young2 volume 0.4
     gg "Вы можете бесконечно требовать от меня разные формулы и решения, но с таким подходом вы не добьетесь абсолютно ничего!"
+    stop music
 
     teacher "Ты совсем совесть потерял? Забыл кто ты, а кто я?"
     teacher "Где уважение к старшим?"
     teacher "Завтра я хочу видеть твоих родителей, хочу обсудить их “чадо”"
-    
+
+    scene black
+    with fade
+    pause 0.75
+    mother "Сын, иди на кухню"
+
+    "*Скрипучий звук открывающийся двери*"
+
+    scene bg fiveth
+    with fade
+    pause 0.75
+    play music father1 volume 0.8
+    father "*Очень вспыльчиво* Сколько можно позорить семью? Я сто раз говорил тебе, забудь про свое эго!"
+    stop music
+
+    play music father3 volume 0.8
+    father "*Сильный кашель*"
+    stop music
+
+    play music father2 volume 0.8
+    father "Но нет, тебе надо спорить, непонятно для чего стоять на своем, тебя вообще не волнует то, что происходит вокруг тебя!"
+    stop music
+
+    play music young3 volume 0.4
+    gg "Я не виноват, что Елизавета Андреевна не умеет нормально объяснять"
+    stop music
+
+    play music young9 volume 0.4
+    gg "За любую малейшую ошибку она хочет выставить меня перед всеми дураком"
+    stop music
+
+    play music father3 volume 0.8
+    father "*Сильный кашель*"
+    stop music
+
+    mother "Пожалуйста, не перечь отцу"
+
+    mother "Ты же сам должен понимать, ведь ты уже почти взрослый"
+
+    play music young4 volume 0.4
+    gg "А что я должен понимать?"
+    stop music
+
+    mother "Что иногда есть вещи поважнее личного мнения и амбиций"
+
     return
     
 label rigth_answer:
 
     scene bg third
-    with fade
 
     teacher "Хмм"
     teacher "Правильно"
-    teacher " У тебя шпаргалка? В телефон подсмотрел? Может подсказал кто?"
+    teacher "У тебя шпаргалка? В телефон подсмотрел? Может подсказал кто?"
 
-    gg "С чего вы взяли?"
-    gg "Какой смысл мне тогда учить хоть что-то, если что бы я не ответил, я в любом случае виноват!"
+    play music young4 volume 0.4
+    gg "Да с чего вы взяли?"
+    stop music
+
+    play music young6 volume 0.4
+    gg "А какой смысл мне тогда учить хоть что-то, если что бы я не ответил, я в любом случае виноват?"
+    stop music
     
     teacher "Успокойся и не забывай с кем ты разговариваешь"
+
+    teacher "Нашел ответ где-то и строишь из себя непонятно кого"
+
+    teacher "Завтра я хочу видеть твоих родителей, хочу обсудить их “чадо”"
+
+    scene bg fiveth
+    with fade
+    pause 0.75
+    play music father1 volume 0.8
+    father "*Очень вспыльчиво* Сколько можно позорить семью? Я сто раз говорил тебе, забудь про свое эго!"
+    stop music
+
+    play music father3 volume 0.8
+    father "*Сильный кашель*"
+    stop music
+
+    play music father2 volume 0.8
+    father "Но нет, тебе надо спорить, непонятно для чего стоять на своем, тебя вообще не волнует то, что происходит вокруг тебя!"
+    stop music
+
+    play music young7 volume 0.4
+    gg "Я же был прав, мой  ответ был верным"
+    stop music
+
+    play music young8 volume 0.4
+    gg "Она просто меня ненавидит"
+    stop music
+
+    play music father3 volume 0.8
+    father "*Сильный кашель*"
+    stop music
+
+    mother "Пожалуйста, не перечь отцу"
+
+    mother "Ты же сам должен понимать, ведь ты уже почти взрослый"
+
+    play music young4 volume 0.4
+    gg "А что я должен понимать?"
+    stop music
+
+    mother "Что иногда есть вещи поважнее личного мнения и амбиций"
+
+    scene bg second2
+    with fade
+    pause 0.75
+
+    gg "Эх, отец, жалко я тогда не понимал"
+
+    gg "Молодой и глупый, пытающийся доказать всем свою правоту"
+
+    gg "Может и хорошо, что ты не видишь меня сейчас, это было бы сплошное разочарование"
 
     return
