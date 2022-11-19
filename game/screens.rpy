@@ -297,17 +297,9 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        textbutton _("Начать") action Start()
 
-            textbutton _("Начать") action Start()
-
-        else:
-
-            textbutton _("История") action ShowMenu("history")
-
-            textbutton _("Сохранить") action ShowMenu("save")
-
-        textbutton _("Продолжить") action ShowMenu("load")
+        textbutton _("История") action ShowMenu("history")
 
         textbutton _("Настройки") action ShowMenu("preferences")
 

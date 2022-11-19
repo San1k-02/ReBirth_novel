@@ -410,9 +410,6 @@ define gui.nvl_button_xalign = 0.0
 ## https://www.renpy.org/doc/html/style_properties.html#style-property-language
 
 define gui.language = "unicode"
-define audio.phonk = "audio/phonk.mp3"
-
-play music phonk volume 0.2
 
 ################################################################################
 ## Мобильные устройства

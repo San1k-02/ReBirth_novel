@@ -62,8 +62,8 @@ define config.has_voice = True
 ## проигрываться в главном меню. Этот файл продолжит проигрываться во время
 ## игры, если не будет остановлен, или не начнёт проигрываться другой аудиофайл.
 
-define config.main_menu_music = "audio/sound phon.mp3" 
-play music main_menu_music volume 0.2
+define config.main_menu_music = "audio/sound_background.mp3" 
+play music main_menu_music volume 1.6
 
 
 ## Переходы ####################################################################
