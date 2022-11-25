@@ -2,9 +2,37 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 233: end of line expected.
-    father "*Очень вспыльчиво*" "Сколько можно позорить семью? Я сто раз говорил тебе, забудь про свое эго!"
-                                ^
+File "game/script.rpy", line 6: expected 'word' not found.
+    define audio.dictor1.1 = "audio/dictor/1.1.mp3"
+                         ^
+
+File "game/script.rpy", line 7: expected 'word' not found.
+    define audio.dictor1.2 = "audio/dictor/1.2.mp3"
+                         ^
+
+File "game/script.rpy", line 16: expected 'word' not found.
+    define audio.dictor8.1 = "audio/dictor/8.1.mp3"
+                         ^
+
+File "game/script.rpy", line 17: expected 'word' not found.
+    define audio.dictor8.2 = "audio/dictor/8.2.mp3"
+                         ^
+
+File "game/script.rpy", line 80: expecting name after dot.
+    play sound dictor1.1 volume 1.0
+                       ^
+
+File "game/script.rpy", line 84: expecting name after dot.
+    play sound dictor1.2 volume 1.0
+                       ^
+
+File "game/script.rpy", line 153: expecting name after dot.
+    play sound dictor8.1 volume 0.8
+                       ^
+
+File "game/script.rpy", line 157: expecting name after dot.
+    play sound dictor8.2 volume 0.8
+                       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Nov 16 22:59:37 2022
+Sun Nov 20 19:59:20 2022
